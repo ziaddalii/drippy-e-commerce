@@ -21,7 +21,7 @@ function App() {
 
 
   return (
-    <HashRouter>
+    <HashRouter base="/">
     <AuthProvider>
       <ProductsContext>
         <Navbar />
