@@ -1,0 +1,43 @@
+.giveaway-section{
+    padding: 48px 0;
+    background-color: #EFEFEF;
+}
+
+.giveaway-section .section-info{
+    width: 300px;
+}
+.giveaway-color{
+    color: var(--theme-color);
+}
+.giveaway-item{
+    padding: 2rem .5rem;
+}
+
+.giveaway-item .giveaway-icon{
+    object-fit: cover;
+    width: 40px;
+}
+.giveaway-item p{
+    text-transform: uppercase;
+    margin-top: 1rem;
+}
+
+.air-jordans{
+    width: 100%;
+    object-fit: cover;
+}
+
+.giveaway-section .btn-start-now{
+    display: block;
+    margin: 0 auto;
+    padding: .5rem 2rem;
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+.giveaway-section .btn-start-now:hover{
+    box-shadow: 1px 1px 15px 0px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 1px 1px 15px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 1px 1px 15px 0px rgba(0,0,0,0.25);
+}

@@ -1,0 +1,224 @@
+.products-container{
+    /* margin: 40px 0px; */
+}
+
+.product-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+}
+
+.product-item a{
+    text-decoration: none;
+}
+
+.sale-tag{
+    position: absolute;
+    width: 40px;
+    top: 0;
+    left: 30px;
+}
+.product-info{
+    margin: 0 auto;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+.product-price{
+    font-weight: lighter;
+}
+
+.product-price-sale{
+    /* font-weight: lighter; */
+    color: var(--theme-color);
+}
+
+.price-on-sale{
+    font-weight: lighter;
+    text-decoration: line-through;
+}
+
+.product-icon{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    /* z-index: 100; */
+    /* padding: 3px; */
+    /* background-color: white; */
+    /* border-radius: 50%;
+    -webkit-box-shadow: 0px 3px 12px 0px rgba(173,173,173,1);
+    -moz-box-shadow: 0px 3px 12px 0px rgba(173,173,173,1);
+    box-shadow: 0px 3px 12px 0px rgba(173,173,173,1); */
+    top: 12px;
+    cursor: pointer;
+    transition: .1s;
+}
+.product-icon:hover{
+    /* background-color: rgba(255, 255, 255, 0.5); */
+    scale: 1.1;
+}
+
+.add-to-cart-icon{
+    right: 30px;
+    /* top: 10px; */
+}
+
+.add-to-favs-icon{
+    right: 90px;
+    /* top: 10px; */
+}
+/* SWIPER */
+.swiper{
+    margin-top: 0;
+}
+.swiper-button-next, .swiper-button-prev{
+    color: var(--primary-color)!important;
+    border: 30px solid rgba(255, 255, 255);
+    /* border-radius: 50%; */
+    scale: .5;
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover{
+    color: var(--theme-color)!important;
+    border: 30px solid white;
+}
+.swiper-pagination-bullet-active{
+    background-color: var(--theme-color)!important;;
+}
+
+.swiper-wrapper{
+    scale: .8;
+}
+
+/* Filters */
+.show-option{
+    /* border: black solid 1px; */
+    /* padding: 5px 10px; */
+
+}
+.show-btn{
+    background-color: white;
+    padding: 5px 5px;
+    border: none;
+    border-radius: 0!important;
+    width: 35px;
+    height: 35px;
+}
+
+.show-btn img{
+    padding: 5px;
+    object-fit: cover;
+    width: 35px;
+}
+
+.active-show-btn{
+    background-color: var(--secondary-theme-color);
+    border: black solid 1px;
+}
+
+.filter-tools .search-input-container{
+    position: relative;
+    overflow: hidden;
+    outline: none;
+    padding: 5px;
+    height: 35px;
+    /* margin-left: 15px; */
+    max-width: 250px;
+    border: none;
+    background-color: #EBEDEE !important;
+}
+
+.filter-tools .search-input-container input{
+    outline: none;
+    border: none;
+    background-color: transparent !important;
+    width:100%
+}
+.filter-tools .search-input-container .search-icon{
+    position: absolute;
+    object-fit: contain;
+    width: 40px;
+    padding: 10px;
+    right: 3%;
+    cursor: pointer;
+}
+
+.sort-btn{
+    background-color: white;
+    padding: 5px 10px;
+    /* outline: none!important; */
+    border: black solid 1px;
+    border-radius: 0!important;
+    height: 35px;
+}
+
+@media screen and (max-width: 1200px) {
+    .filter-show{
+        justify-content: start!important;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .filter-option{
+        justify-content: center!important;
+        margin: auto;
+    }
+}
+
+
+/* .sort-btn:focus{
+    outline: none!important;
+} */
+.active-sort-btn{
+    background-color: var(--secondary-theme-color);
+    color: var(--theme-color);
+}
+
+.filter-option .dropdown-menu{
+    z-index: 10;
+}
+
+.second-hand-check{
+    /* margin-left: 15px; */
+}
+
+/* Second Hand section */
+
+.btn-sell{
+    border-radius: 0;
+    padding: 10px 15px;
+}
+
+.empty-msg{
+    height:500px
+}
+
+.sell-btn{
+    /* font-weight: bold; */
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border: black solid 1px;
+    border-radius: 0!important;
+    height: 35px;
+}
+
+.sell-btn:hover{
+    box-shadow: 1px 1px 15px 0px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 1px 1px 15px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 1px 1px 15px 0px rgba(0,0,0,0.25);
+}
+
+.btn-submit{
+    background: black;
+    border: none;
+    color: white;
+    padding: .5rem 1rem;
+}
+
+.btn-submit:hover{
+    box-shadow: 1px 1px 15px 0px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 1px 1px 15px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 1px 1px 15px 0px rgba(0,0,0,0.25);
+}

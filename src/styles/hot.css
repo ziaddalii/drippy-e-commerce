@@ -1,0 +1,48 @@
+.hot-item{
+    padding: 15px;
+    position: relative;
+    overflow: hidden;
+    transition: .3s ease-out;
+}
+
+.hot-item:hover .hot-btn{
+    left: 15px;
+    bottom: 15px;
+}
+
+.hot-item:hover{
+    scale: 1.05;
+}
+
+.hot-item:hover .hot-img{
+    box-shadow: 1px 1px 15px 0px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 1px 1px 15px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 1px 1px 15px 0px rgba(0,0,0,0.25);
+}
+
+.hot-accessories{
+    height: 300px;
+}
+
+.hot-img{
+    object-fit: cover;
+    width: 100%;
+    transition: .3s ease-out;
+}
+
+.hot-btn{
+    padding: .5rem 1rem;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 15px;
+    left: -200px;
+    background-color: black;
+    color: white;
+    border: none;
+    transition: .5s ease-out;
+}
+
+.square{
+    aspect-ratio: 1/1;
+    overflow: hidden;
+}

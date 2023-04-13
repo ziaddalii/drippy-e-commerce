@@ -1,0 +1,13 @@
+.addresses-btn{
+    background-color: black;
+    border: none;
+    color: white;
+    padding: .5rem 1rem;
+    border-radius: 0;
+    font-size: 14px;
+}
+
+.addresses-btn img{
+    max-width: 25px;
+    object-fit: cover;
+}

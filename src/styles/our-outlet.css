@@ -1,0 +1,22 @@
+.our-outlet-section{
+    background-color: black;
+}
+
+.our-outlet-section h2,.our-outlet-section p,.our-outlet-section span,.our-outlet-section button{
+    color: white;
+}
+
+.our-outlet-section h2{
+    font-size: 48px;
+}
+.our-outlet-section button{
+    background: none;
+    border: 0 solid white;
+    border-bottom: 1px solid white;
+}
+
+@media screen and (max-width: 767px){
+    .our-outlet-info{
+        padding-top: 48px;
+    }
+}
