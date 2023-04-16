@@ -1,5 +1,5 @@
 {
-  "homepage": "https://ziaddalii.github.io/",
+  "homepage": "./",
   "name": "drippy",
   "version": "1.0.0",
   "description": "",
@@ -7,7 +7,7 @@
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist -b new",
+    "deploy": "gh-pages -d dist -b new-gh-page",
     "build": "webpack --mode production"
   },
   "keywords": [],
