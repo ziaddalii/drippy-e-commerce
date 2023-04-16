@@ -21,7 +21,7 @@ function App() {
 
 
   return (
-    <HashRouter basename="/drippy-e-commerce">
+    <HashRouter>
     <AuthProvider>
       <ProductsContext>
         <Navbar />
