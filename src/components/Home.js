@@ -3,10 +3,10 @@ import Hero from './Hero'
 import LookingDrippy from './LookingDrippy'
 import OurProducts from './OurProducts'
 import Hot from './Hot'
-import WhyWe from './WhyWe';
 import OurOutlet from './OurOutlet';
 import Giveaway from './Giveaway';
 import ReachUs from './ReachUs'
+import WhyUs from './WhyUs'
 function Home() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -17,7 +17,7 @@ function Home() {
         <LookingDrippy/>
         <OurProducts/>
         <Hot/>
-        <WhyWe/>
+        <WhyUs/>
         <OurOutlet/>
         <ReachUs/>
         <Giveaway/>
