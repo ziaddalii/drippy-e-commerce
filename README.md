@@ -1,7 +1,7 @@
 ## DRIPPY E-Commerce
 This is an e-commerce project that allows users to buy and sell products online. The project is built using HTML, CSS, Bootstrap, React.js, and various other tools and APIs.
 
-### Live code
+### Live demo
 **https://ziaddalii.github.io/drippy-e-commerce/**
 ### Getting Started
 To run the project locally, follow these steps:
