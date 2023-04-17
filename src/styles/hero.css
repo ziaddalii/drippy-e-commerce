@@ -95,7 +95,7 @@
         width: 100vw;
     }
     .hero-carousel-img{
-        height: 100%;
+        height: 100%!important;
     }
     .hero-carousel-img-container{
         width: 100%;
