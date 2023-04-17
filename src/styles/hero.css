@@ -94,6 +94,9 @@
         height: 100vh;
         width: 100vw;
     }
+    .hero-carousel-img{
+        height: 100%;
+    }
     .hero-carousel-img-container{
         width: 100%;
     }
