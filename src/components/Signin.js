@@ -95,7 +95,7 @@ async function handleGoogleSubmit(event) {
           <input type="password" ref={passRef} required autoComplete='on' className="form-control" id="InputPassword1"/>
         </div>
         <p className={errMsg ? "text-danger" : "d-none"}>{errMsg}</p>
-        <button disabled={loading} onClick={(e) => handleSubmit(e, emailRef.current.value, passRef.current.value)} className="btn signin-btn">sign in</button>
+        <button disabled={loading} onClick={(e) => handleSubmit(e, emailRef.current.value, passRef.current.value)} className="btn signin-btn text-uppercase">sign in</button>
         <button className='d-flex justify-content-center align-items-center btn google-btn' onClick={(event) => handleGoogleSubmit(event)}>
         <img className='google-img' src={google}/>
         Sign in with Google</button>

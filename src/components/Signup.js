@@ -226,7 +226,7 @@ function Signup() {
             {checkboxMsg ? checkboxMsg: ""}
           </small>
         <p className={errMsg ? "text-danger" : "d-none"}>please fill all fields with valid values</p>
-        <button disabled={loading} type="submit" className="btn signup-btn" onClick={(e) => {checkUser(e)}}>Submit</button>
+        <button disabled={loading} type="submit" className="btn signup-btn text-uppercase" onClick={(e) => {checkUser(e)}}>Submit</button>
         <button className='d-flex justify-content-center align-items-center btn google-btn' onClick={handleGoogleSubmit}>
         <img className='google-img' src={google}/>
         Sign in with Google</button>

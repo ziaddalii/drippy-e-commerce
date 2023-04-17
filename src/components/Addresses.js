@@ -69,6 +69,7 @@ function Addresses() {
                 })
             }
             </ul>
+            <p className='text-uppercase'>find the closest outlet to you</p>
             <button onClick={() => findClosestOutlet(latitude,longitude)} className='addresses-btn d-flex align-items-center'>
                 <img className='mr-1' src={locationPinBtn}/>
                 <span className='text-uppercase text-white'>find now</span>
