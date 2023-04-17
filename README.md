@@ -1,13 +1,16 @@
 ## DRIPPY E-Commerce
 This is an e-commerce project that allows users to buy and sell products online. The project is built using HTML, CSS, Bootstrap, React.js, and various other tools and APIs.
 
+### Live demo
+**https://ziaddalii.github.io/drippy-e-commerce/**
 ### Getting Started
 To run the project locally, follow these steps:
 
 * Clone the repository to your local machine.
 * Navigate to the project directory and run npm install to install all dependencies.
 * Create a **.env** file in the project directory and add your Firebase API key for security.
-*Run **npm start** to start the development server.
+* Run **npm start** to start the development server.
+
 #### Prerequisites
 * Node.js
 * npm
@@ -44,7 +47,7 @@ To deploy the project to a production environment, follow these steps:
 
 
 ### Authors
-Ziad Ali - Developer
+* Ziad Ali - Developer
 
 ### Acknowledgments
 * React.js documentation
