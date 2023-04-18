@@ -1,5 +1,5 @@
 import React, {useState,useEffect,useRef} from 'react'
-import {Link } from 'react-router-dom';
+import {Link, useNavigate } from 'react-router-dom';
 import "../styles/our-products.css";
 import "../styles/popup.css"
 import { productsData } from '../data/productsData';
@@ -39,6 +39,8 @@ function OurProducts() {
   const swiperProductsRef = useRef(null);
 
   const [isWide, setIsWide] = useState(false);
+
+  const navigate = useNavigate()
 
   useEffect(() => {
     checkCarted(cart, products)
