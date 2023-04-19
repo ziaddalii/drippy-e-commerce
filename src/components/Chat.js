@@ -1,9 +1,11 @@
 import React, {useEffect} from 'react'
+// import "../styles/chat.css"
+
 function Chat() {
     useEffect(() => {
         (function(d, m){
             var kommunicateSettings = 
-                {"appId": process.env.REACT_APP_KOMMUNICATE_APP_ID, "popupWidget":true,"automaticChatOpenOnNavigation":true,
+                {"appId":process.env.REACT_APP_KOMMUNICATE_APP_ID,"popupWidget":true,"automaticChatOpenOnNavigation":true,
              "onInit": function (){
                 var css = "#launcher-svg-container img {padding: 7px; box-sizing:border-box;}";
                 Kommunicate.customizeWidgetCss(css);            }

@@ -1,5 +1,5 @@
 import React, {useState,useEffect,useRef} from 'react'
-import {Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import "../styles/our-products.css";
 import "../styles/popup.css"
 import { productsData } from '../data/productsData';
