@@ -5,9 +5,11 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import google from "../images/icons/google.png"
 import {firestore } from "./firebase";
+import { useProducts } from '../contexts/ProductsContext';
 
 
 function Signin () {
+  const {setFavorites, setCart} = useProducts();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -24,6 +26,7 @@ function Signin () {
 
 // get the user's fav and cart list from firestore
 const getDataFromFireStore = async (currentUser) =>{
+
   try {
     const user = currentUser.user
     const doc = await firestore.collection("users").doc(user.uid).get();
@@ -32,11 +35,15 @@ const getDataFromFireStore = async (currentUser) =>{
       const cart = data.cart;
       const favs = data.favs;
       // Save the data to local storage
+      
       localStorage.setItem("productsInCart", JSON.stringify(cart));
+      setCart(cart)
       localStorage.setItem("productsInFavs", JSON.stringify(favs));
+      setFavorites(favs)
     } else {
     }
   } catch (error) {
+    console.error(error);
   }
 }
 
