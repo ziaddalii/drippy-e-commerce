@@ -1,0 +1,26 @@
+export const colors = [{
+        myColor:"tomato",
+        available:true,
+        id:"1"
+    },
+    {
+        myColor:"grey",
+        available:false,
+        id:"2"
+    },
+    {
+        myColor:"purple",
+        available:true,
+        id:"3"
+    },
+    {
+        myColor:"orange",
+        available:true,
+        id:"4"
+    },
+    {
+        myColor:"navy",
+        available:false,
+        id:"5"
+    },
+]

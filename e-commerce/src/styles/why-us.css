@@ -1,0 +1,18 @@
+.why-us-section{
+    /* background-color: #EFEFEF; */
+    padding: 48px 0px;
+}
+
+.why-us-card{
+    /* background-color: black; */
+    /* color: white; */
+    /* border: 1px black solid; */
+    padding: 2rem 2rem;
+}
+
+.why-us-card p{
+    font-weight: lighter;
+    color: rgb(49, 49, 49);
+}
+
+

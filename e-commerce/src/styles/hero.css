@@ -1,0 +1,113 @@
+.hero-section{
+    position: fixed;
+    top: 0;
+    z-index: -10;
+}
+.carousel-item{
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+.hero-carousel-img-container{
+    width: 100vw;
+    height: 100%;
+    position: relative;
+}
+
+.hero-carousel-img-container::after{
+    content:"";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+@keyframes hero-move {
+    0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(1.1);
+      }
+
+  }
+  
+.hero-carousel-img{
+    width: 100%;
+    height: 750px;
+    object-fit: cover;
+    animation: hero-move 10s linear infinite;
+
+}
+
+.carousel-form{
+    position: absolute;
+    height: 100%;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%,-50%); 
+    text-align: center;
+    z-index: 10;
+    text-transform: uppercase;
+}
+
+.carousel-title{
+    color: var(--primary-background);
+    font-size: 3vw;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+
+.carousel-desc{
+    margin-left: auto;
+    font-size: 12px;
+    font-weight: lighter;
+    color: var(--primary-background);
+    margin-bottom: 10px;
+}
+
+.carousel-btn-shop{
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid white;
+    border-radius: 0;
+    color: var(--primary-background);
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+}
+
+.carousel-btn-shop:hover{
+    background-color: var(--secondary-theme-color);
+    color: var(--theme-color);
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 767px) {
+    .carousel-item{
+        height: 100vh;
+        width: 100vw;
+    }
+    .hero-carousel-img{
+        height: 100%!important;
+    }
+    .hero-carousel-img-container{
+        width: 100%;
+    }
+    .carousel-form{
+        text-align: center;
+    }
+    .carousel-title{
+        font-size: 33px;
+    }
+    .carousel-desc{
+        margin: auto auto 10px auto;
+        font-size: 8px;
+    }
+}

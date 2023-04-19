@@ -1,0 +1,41 @@
+.reach-section{
+    background-color: black;
+}
+
+.photo{
+    max-height: 550px;
+    object-fit: cover;
+}
+.reach-section p,.reach-section h2,.reach-section h4,.reach-section button{
+    color: white;
+    text-transform: uppercase;
+}
+
+.reach-section p{
+    max-width: 350px;
+}
+
+.reach-icon{
+    width: 40px;
+    margin: 1rem 0;
+}
+.reach-btn{
+    background-color: white;
+    border: none;
+    color: black;
+    padding: .5rem 1rem;
+    border-radius: 0;
+    font-size: 14px;
+}
+
+.reach-btn img{
+    max-width: 25px;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 767px){
+    .reach-content{
+        padding-top: 48px;
+        order: 1;
+    }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "drippy-faq-chat-bot-txnb",
+  "private_key_id": "aa0f9ddf78deee61dd5c3ed402fa7eec901b2045",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDGo73kiTxz8Xgl\nGwDH2W1Asr5SQbGOXyHv0jQHbOgInibwMEW29ukoQcTE80Y3iyrFs4IEzev/kNW0\n545hfoYpyIpPkSwBSCdaG+kHxSKMeKptXlFsPvifPnplIkYq5Ncspfv0K8uBiEeC\nRzaJGQc5gRIupAGxZGQ47FG4htQJMOMeJCm3oLzltHtsh/qDaYglvm/LmObLqrz6\n/HXEJBh0hk6V0igymb+mruMtBqeiSRJKEdwIXzJZwZ/vy4y0DKoyYqS7E9AiGfou\nxGG/qmk6CF92fgMvx7BZIVHA+hxPAvOtPyxmTFv3cF8BUNkH+il3kdkh/0FWbQEG\njdKxw5IXAgMBAAECggEADf7UbskyjrK5NdgQtoP9vBy75xzEz1SplfWX/9vu/0hx\nUuP7zXfZFqKHpB7F2D0AbvyGUSNXGOMSA5R7Bih9eG0uPYvrb02vpBwqT4dWt1H7\nJAiMsRVAvCuRQRXonrYP6Q/q0BnT1VUOQMIWuBMg3K7Y4ptgmSiLHS2dVmR9hQYi\nZSSEd4fEjd4+2eVv4UnZ+eT/IFYyXNNw4ZXqk9V0lnxpCyE703gh0QwAQwEj2706\n/CVkmVr+1EdOpvs7qLK6ooH1CIGblsNjoFNBJis9N2O3KW+eJk4NDb6uVr+9MqZ4\n0eGqnufT9msx+PoJO/SF06EoPuB/JXiLwNX/bMHe3QKBgQDy4FvG9OxeiWrCAYXi\nE7V4QngdXkv3/D9wpRutZ9fI02lB059LVOKv9gun9nRfDYhlnZxwzBLHv+3HjH0b\nEzJDo12arX6pRm+yu7ZWPdIwztVgcEJJCsyDynAUU1NJgXnYdUPZNA6lp9DD4YJg\ndyEMHEP05x2bFCILPeGlTYCopQKBgQDRX3fZ7cwQpuxLKkrRrkihRNM5iwbfLK6l\n2AmiQi71kXqpJ/k0z/fNAw+oRAyRGtwwTE11ulbGEFNdLnMVLxDvtQwbE1c3+AZK\nPMG7Qp678iy6fZU0XnZthKT7mIDgeavXiHSaRJhPe0ZS5wjBeLeHhKoRzQLbgxfN\nmHPVpEeXCwKBgCy8BEt9+zdiaiZ3r1g3txoCbCtEngt8C5dM4e8rjEQyJFX6i4GN\njf9I+1ahf0eur2u//vuLqv3drQcvKi/ddkmdAnWl9QlqrtIl3uy9kERrJEQSCTN4\n6LhxhflIa7PDRFUJLEkKXJRId5xMof3wk0auwhmOpBZXO/oEGNagksz9AoGAMmCv\nPN+r30Haz0cw030E+tDNpiXelGpy53Kw9rrIA8xqYDM/EkcMD+cxqEIfZ/a3jmN9\nq9sXL/cTp/MaO7mkcJj2fblMninukYRG9SDVgtGFk6XN9djY1Ac7j1IliF2eTHEH\n5Wql31IBHMd8YtkCB/iS10+l5V2Ip66MCJbLpvsCgYA2vJ05v36Ao5BlaGMzUjyv\n1BpmVP5jkTsGh2h0T+6lMELTp/1kB5RuF760osQIc+r2+suwFaUKcHhDOamO3VX1\nB1OLaC+H4Ix9gJhbQ8QIgnjN/Tq7jfY0Nx4dzh6G+lmFw7+ZYXiV4+h1I1TdIJ4c\nrTJJMNkJEK4qwn+9WwUVDg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "faq-chatbot@drippy-faq-chat-bot-txnb.iam.gserviceaccount.com",
+  "client_id": "109042123606669143879",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/faq-chatbot%40drippy-faq-chat-bot-txnb.iam.gserviceaccount.com"
+}

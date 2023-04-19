@@ -1,0 +1,35 @@
+.footer-section{
+    padding: 50px 0;
+    background-color: black;
+}
+
+.footer-section div{
+    color: white;
+}
+
+.footer-logo{
+    width: 40px;
+    margin-right: 5px;
+    /* height: 80px; */
+    object-fit: cover;
+}
+
+.footer-title{
+    font-size: 24px; ;
+    list-style-type: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.footer ul, .footer-link, .footer-text{
+    text-transform: uppercase;
+    color: white;
+    list-style-type: none;
+    font-weight: 100;
+}
+
+.footer-link:hover{
+    text-decoration: none;
+    color: white;
+}
+
