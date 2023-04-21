@@ -1,5 +1,5 @@
 import React from 'react'
-import { HashRouter , Route, Routes } from 'react-router-dom'
+import { BrowserRouter , Route, Routes } from 'react-router-dom'
 import Navbar from './Navbar'
 import "../styles/app.css"
 import Home from './Home'
@@ -21,7 +21,7 @@ function App() {
 
 
   return (
-    <HashRouter>
+    <BrowserRouter basename='/drippy-e-commerce/'>
     <AuthProvider>
       <ProductsContext>
         <Navbar />
@@ -42,7 +42,7 @@ function App() {
         <Chat/>
           </ProductsContext>
         </AuthProvider>
-    </HashRouter>
+    </BrowserRouter>
   )
 }
 
