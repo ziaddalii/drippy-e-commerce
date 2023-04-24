@@ -14,7 +14,7 @@ module.exports = {
         publicPath: '/drippy-e-commerce/',
     },
     devServer: {
-        historyApiFallback: true,
+        // historyApiFallback: true,
         historyApiFallback: {
             rewrites: [{ from: /\/drippy-e-commerce\/[^?]/, to: '/404.html' }],
           },
