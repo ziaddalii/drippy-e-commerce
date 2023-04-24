@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter , Route, Routes } from 'react-router-dom'
+import { BrowserRouter , Route, Switch } from 'react-router-dom'
 import Navbar from './Navbar'
 import "../styles/app.css"
 import Home from './Home'
@@ -26,7 +26,7 @@ function App() {
       <ProductsContext>
         <Navbar />
         
-        <Routes>
+        <Switch>
           <Route exact path='/' element={<Home/>} />
           <Route path='/signup' element={<Signup/>} />      
           <Route path='/signin' element={<Signin/>} />  
@@ -37,7 +37,7 @@ function App() {
           <Route path="/jackets" element={<Jackets/>} />  
           <Route path="/sales" element={<Sales/>} />  
             
-        </Routes>
+        </Switch>
         <Footer/>
         <Chat/>
           </ProductsContext>
