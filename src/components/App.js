@@ -21,7 +21,7 @@ function App() {
 
 
   return (
-    <BrowserRouter basename='/drippy-e-commerce/'>
+    <BrowserRouter basename='/'>
     <AuthProvider>
       <ProductsContext>
         <Navbar />
