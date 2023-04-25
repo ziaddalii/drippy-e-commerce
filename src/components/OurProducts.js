@@ -180,64 +180,81 @@ function OurProducts() {
     const [loading, setLoading] = useState(false)
     const [imgUrl, setImgUrl] = useState(null)
     const [productUploaded, setProductUploaded] = useState(false)
-    const productTitleRef = useRef(null);
-    const productPriceRef = useRef(null);
+    const productTitleRef = useRef(false);
+    const productPriceRef = useRef(false);
 
 
     async function handleUpload(event) {
       event.preventDefault();
-      try{
-        setLoading(true)
-        const newProduct = {
-          title: productTitleRef.current.value,
-          price: productPriceRef.current.value ,
-          img: imgUrl,
-          id:Math.random(),
-          secondHand: true,
-        };
-        setProducts(productCheck(cart, favorites , [...products, newProduct]))
-        setProductUploaded(true)
-        setTimeout(() => {
-          setPopup(false)
-          setProductUploaded(false)
-        }, 1000);
-        setLoading(false)
-      }catch{
-        setLoading(false)
-        setUploadErr("Failed")
+      const productTitle = productTitleRef.current.value.trim();
+      const productPrice = productPriceRef.current.value.trim();
+      const imgInput = document.getElementsByClassName("img-input")[0]
+      // await checkImage(imgInput)
+      const productImgUrl = imgUrl
+
+      console.log(imgInput.files, imgInput.value);
+      if(productTitle === "" || productPrice === "" || imgInput.value === ""){
+        setUploadErr("all fields are required")
+      }else{
+        try{
+          setLoading(true)
+          const newProduct = {
+            title: productTitle,
+            price: productPrice,
+            img: productImgUrl,
+            id:Math.random(),
+            secondHand: true,
+          };
+          console.log(newProduct);
+          setProducts(productCheck(cart, favorites , [...products, newProduct]))
+          setTimeout(() => {
+            setPopup(false)
+            setProductUploaded(false)
+          }, 1000);
+          setLoading(false)
+          setProductUploaded(true)
+          setUploadErr("");  
+        }catch{
+          setLoading(false)
+          setUploadErr("Failed1")
+        }
       }
     }
 
     const checkImage = (event) => {
-      let file = event.target.files[0];    
+      let files = event.target.files;
+      let file = files[0];    
       let types = ["image/jpeg" , "image/png"];
       
-      if(types.indexOf(file.type) === -1){
+      if (!files || files.length === 0) {
+        setUploadErr('Please select an image to upload');
+      }else{
+        if(types.indexOf(file.type) === -1){
           setUploadErr('image type must be (png/jpg)')
-          return;
+        }else{
+          if(file.size > 2 * 1024 * 1024){
+              setUploadErr("image size must be smaller than 2MB");
+          }else{
+            getImageBase64(file);
+          }
+        }
       }
-      if(file.size > 2 * 1024 * 1024){
-          setUploadErr("image size must be smaller than 2MB");
-          return;
-      }
-      
-      getImageBase64(file);
     }
   
-    const getImageBase64 = (file) => {
+    const getImageBase64 = async (file) => {
       const reader = new FileReader();
-  
+
       reader.readAsDataURL(file);
-  
-      reader.onload = function (){
+
+      reader.onload = await function (){
           const productImage = reader.result;
           setImgUrl(productImage)
-          setUploadErr("");
-      };
-  
-      reader.onerror = function(){
-        setUploadErr("error uploading the product, please try again");
-      };
+          console.log(productImage);
+        };
+        
+        reader.onerror = function(){
+          setUploadErr("error uploading the product, please try again");
+        };
     }
     return (
       <section>
@@ -362,7 +379,7 @@ function OurProducts() {
                       </div>
                       <div className="form-group">
                         <label htmlFor="exampleFormControlFile1" className='text-capitalize'>product image:</label>
-                        <input onChange={() => checkImage(event) } type="file" className="form-control-file" id="exampleFormControlFile1" accept="image/png, image/jpeg" />
+                        <input onChange={(event) => {checkImage(event)}} type="file" className="img-input form-control-file" id="exampleFormControlFile1" accept="image/png, image/jpeg" />
                         <small className='text-secondary'>preferred 1:1 ratio image</small>
                       </div>
                       <p className='text-danger'>{uploadErr}</p>
