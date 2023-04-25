@@ -130,6 +130,13 @@ nav{
     left: -197%!important;
 }
 
+.close-sidebar{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 90%;
+    background: none;
+    border: none;
+}
 /* Media Query */
 @media screen and (max-width: 992px) {
     .nav-sidebar-logo{
@@ -142,7 +149,8 @@ nav{
         background-color: var(--primary-background);
         top: 0;
         left: -13%;
-        width: 75vw!important;
+        /* width: 75vw!important; */
+        width: 200px!important;
         height: 100vh!important;
         padding: 20px;
         z-index: 10;
@@ -190,5 +198,11 @@ nav{
   @media screen and (min-width: 992px) {
     .navbar-collapse{
         order: 0;
+    }
+    .navbar-nav{
+        margin-top: 0!important;
+    }
+    .close-sidebar{
+        display: none;
     }
 }

@@ -134,16 +134,13 @@ function Navbar() {
             }
         }
       
-          // Add event listener to document object
           document.addEventListener('click', handleClickOutside);
           
-          // Remove event listener on unmount
           return () => {
             document.removeEventListener('click', handleClickOutside);
           };
         });
 
-// Handle Fav Icon Toggle
 const [displayFavs, setDisplayFavs] = useState(false)
 
 const toggleFavs = () => {
@@ -213,23 +210,25 @@ const logout = async () => {
                 </Link>
                 
                 <div className='collapse navbar-collapse justify-content-center width' id="collapseWidthExample">
-                    <div className='nav-sidebar-logo d-none justify-content-center p-0'>
-                        <img className='nav-logo justify-content-center' src={logo}/>
-                    </div>
-                    <ul className="navbar-nav d-flex align-items-center">
-                        <li className='nav-item'>
-                            <Link to="/jackets" className={isNotTop ? 'nav-link' : "nav-link text-white"}>jackets</Link>
-                        </li>
-                        <li className='nav-item'>
-                            <Link to="/shoes" className={isNotTop ? 'nav-link' : "nav-link text-white"}>shoes</Link>
-                        </li>
-                        <li className='nav-item'>
-                            <Link to="/accessories" className={isNotTop ? 'nav-link' : "nav-link text-white"}>accessories</Link>
-                        </li>
-                        <li className='nav-item'>
-                            <Link to="/sales" className={isNotTop ? 'nav-link nav-sales' : "nav-link text-white nav-sales"}>sales</Link>
-                        </li>
-                    </ul>
+                  <button className='close-sidebar' data-toggle="collapse" data-target="#collapseWidthExample" aria-controls="collapseWidthExample" aria-expanded="false" aria-label="Toggle navigation">X</button>
+                    
+                  <div className='nav-sidebar-logo d-none justify-content-center p-0'>
+                    <img className='nav-logo' src={logo}/>
+                  </div>
+                  <ul className="navbar-nav d-flex mt-4">
+                    <li className='nav-item' data-toggle="collapse" data-target="#collapseWidthExample" aria-controls="collapseWidthExample" aria-expanded="false" aria-label="Toggle navigation">
+                        <Link to="/jackets" className={isNotTop ? 'nav-link' : "nav-link text-white"}>jackets</Link>
+                    </li>
+                    <li className='nav-item' data-toggle="collapse" data-target="#collapseWidthExample" aria-controls="collapseWidthExample" aria-expanded="false" aria-label="Toggle navigation">
+                        <Link to="/shoes" className={isNotTop ? 'nav-link' : "nav-link text-white"}>shoes</Link>
+                    </li>
+                    <li className='nav-item' data-toggle="collapse" data-target="#collapseWidthExample" aria-controls="collapseWidthExample" aria-expanded="false" aria-label="Toggle navigation">
+                        <Link to="/accessories" className={isNotTop ? 'nav-link' : "nav-link text-white"}>accessories</Link>
+                    </li>
+                    <li className='nav-item' data-toggle="collapse" data-target="#collapseWidthExample" aria-controls="collapseWidthExample" aria-expanded="false" aria-label="Toggle navigation">
+                        <Link to="/sales" className={isNotTop ? 'nav-link nav-sales' : "nav-link text-white nav-sales"}>sales</Link>
+                    </li>
+                  </ul>
                 </div>
                 <div className='d-flex justify-content-end align-items-center nav-icons col-4'>
                     <div className='search-input-container d-flex align-items-center justify-content-start'>
@@ -256,7 +255,6 @@ const logout = async () => {
                             <Link className={currentUser ? "dropdown-item" : "d-none"} to="#" onClick={()=>{logout()}}>Logout</Link>
                             <Link className={currentUser ? "d-none" : "dropdown-item"} to="/signup">sign up</Link>
                             <Link className={currentUser ? "d-none" : "dropdown-item"} to="/signin">sign in</Link>
-                        
                         </div>
                     </div>
                     
