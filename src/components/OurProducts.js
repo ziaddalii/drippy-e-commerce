@@ -189,10 +189,8 @@ function OurProducts() {
       const productTitle = productTitleRef.current.value.trim();
       const productPrice = productPriceRef.current.value.trim();
       const imgInput = document.getElementsByClassName("img-input")[0]
-      // await checkImage(imgInput)
       const productImgUrl = imgUrl
 
-      console.log(imgInput.files, imgInput.value);
       if(productTitle === "" || productPrice === "" || imgInput.value === ""){
         setUploadErr("all fields are required")
       }else{
@@ -249,7 +247,6 @@ function OurProducts() {
       reader.onload = await function (){
           const productImage = reader.result;
           setImgUrl(productImage)
-          console.log(productImage);
         };
         
         reader.onerror = function(){

@@ -16,6 +16,23 @@
     color: black;
 }
 
+::-webkit-scrollbar{
+    width: 1em;
+}
+
+::-webkit-scrollbar-track{
+    background-color: rgb(210, 210, 210);
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgb(79, 79, 79);
+    border-radius: 100vh;
+    border: solid 1px rgb(210, 210, 210);
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(69, 69, 69);
+}
+
 a {
     color: black;
     text-decoration: none;

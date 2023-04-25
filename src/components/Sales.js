@@ -32,6 +32,10 @@ SwiperCore.use([Navigation]);
 
 
 function Sales() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   const {currentUser} = useAuth()
   const { products, setProducts, addToCart, addToFavs, cart, favorites,checkCarted, checkFaved, productCheck} = useProducts();
 

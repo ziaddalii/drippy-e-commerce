@@ -2,6 +2,7 @@ import React, {useEffect,useState} from 'react'
 import "../styles/cart.css";
 
 import { useProducts } from '../contexts/ProductsContext';
+import { Link } from 'react-router-dom';
  
 
 
@@ -52,7 +53,8 @@ const Cart = React.forwardRef(({className }, ref) => {
           </div>
           {cart.map((cartItem) => {
             return (
-              <div className='cart-item d-flex col-12 align-items-center justify-content-start' key={cartItem.id}>
+            <Link to={`/products/${cartItem.id}`} key={cartItem.id}>
+              <div className='cart-item d-flex col-12 align-items-center justify-content-start'>
                 <div className='d-flex align-items-center col-7 p-0 mr-1'>
                   <img className='cart-img' src={cartItem.img} alt={cartItem.title}/>
                   <span className='cart-title'>{cartItem.title}</span>
@@ -67,6 +69,7 @@ const Cart = React.forwardRef(({className }, ref) => {
                   <button onClick={() => removeFromCart(cartItem)} className='remove-item-btn'>&#10005;</button>
                 </div>
               </div>
+            </Link>
             )
           })}
           <p className='my-1'>total: egp {totalPrice}</p>

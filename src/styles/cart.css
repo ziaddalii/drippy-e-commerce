@@ -65,6 +65,15 @@
     width: 75%;
     text-transform: uppercase;
 }
+.cart a{
+    cursor: pointer;
+}
+.cart a:hover{
+    text-decoration: none;
+}
+.cart a:hover .cart-item{
+    background-color: #eaeaea;
+}
 
 
 

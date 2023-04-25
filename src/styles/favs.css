@@ -51,11 +51,12 @@
 .favs-title{
     margin-left: 5px;
 }
-
-
-
-/* @media screen and (min-width: 992px) {
-    .favs{
-        right: 60px;
-    }
-} */
+.favs a{
+    cursor: pointer;
+}
+.favs a:hover{
+    text-decoration: none;
+}
+.favs a:hover .favs-item{
+    background-color: #eaeaea;
+}

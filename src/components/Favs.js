@@ -1,6 +1,7 @@
 import React, {useEffect,useState} from 'react'
 import "../styles/favs.css";
 import { useProducts } from '../contexts/ProductsContext';
+import { Link } from 'react-router-dom';
  
 
 
@@ -29,6 +30,7 @@ const Favs = React.forwardRef(({className }, ref) =>{
           </div>
           {favorites.map((favsItem) => {
             return (
+            <Link to={`/products/${favsItem.id}`} key={favsItem.id}>
               <div className='favs-item d-flex col-12 align-items-center justify-content-start' key={favsItem.id}>
                 <div className='d-flex align-items-center col-7 p-0 mr-1'>
                   <img className='favs-img' src={favsItem.img} alt={favsItem.title}/>
@@ -39,6 +41,8 @@ const Favs = React.forwardRef(({className }, ref) =>{
                   <button onClick={() => removeFromFavs(favsItem)} className='remove-item-btn'>&#10005;</button>
                 </div>
               </div>
+            </Link>
+
             )
           })}
         </div>
