@@ -38,7 +38,7 @@ const Favs = React.forwardRef(({className }, ref) =>{
                 </div>
                 <span className='favs-price col-3 p-0 mr-1'>EGP {favsItem.salePrice ? favsItem.salePrice : favsItem.price}</span>
                 <div className='col-1 p-0'>
-                  <button onClick={() => removeFromFavs(favsItem)} className='remove-item-btn'>&#10005;</button>
+                  <button onClick={(e) => { e.preventDefault(); removeFromFavs(favsItem)}} className='remove-item-btn'>&#10005;</button>
                 </div>
               </div>
             </Link>

@@ -61,12 +61,12 @@ const Cart = React.forwardRef(({className }, ref) => {
                 </div>
                 <span className='cart-price col-2 p-0 mr-1'>EGP {cartItem.salePrice ? cartItem.salePrice : cartItem.price}</span>
                 <div className='cart-quantity d-flex algin-items-center justify-content-center col-2 p-0'>
-                  <button onClick={() => increaseQuantity(cartItem)} className='btn-plus'>&#43;</button>
+                  <button onClick={(e) => { e.preventDefault(); increaseQuantity(cartItem)}} className='btn-plus'>&#43;</button>
                   <span className=''>{cartItem.quantity}</span>
-                  <button onClick={() => decreaseQuantity(cartItem)} className='btn-minus'>&#8722;</button>
+                  <button onClick={(e) => { e.preventDefault(); decreaseQuantity(cartItem)}} className='btn-minus'>&#8722;</button>
                 </div>
                 <div className='col-1 p-0'>
-                  <button onClick={() => removeFromCart(cartItem)} className='remove-item-btn'>&#10005;</button>
+                  <button onClick={(e) => { e.preventDefault(); removeFromCart(cartItem)}} className='remove-item-btn'>&#10005;</button>
                 </div>
               </div>
             </Link>
