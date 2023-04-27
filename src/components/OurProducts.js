@@ -237,6 +237,7 @@ function OurProducts() {
               imgInput.value = "";
           }else{
             getImageBase64(file);
+              setUploadErr("");
           }
         }
       }
