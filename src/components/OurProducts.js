@@ -191,7 +191,7 @@ function OurProducts() {
       const imgInput = document.getElementsByClassName("img-input")[0]
       const productImgUrl = imgUrl
 
-      if(productTitle === "" || productPrice === "" || imgInput.value === ""){
+      if(productTitle === "" || productPrice === "" || imgUrl === null){
         setUploadErr("all fields are required")
       }else{
         try{
@@ -223,15 +223,18 @@ function OurProducts() {
       let files = event.target.files;
       let file = files[0];    
       let types = ["image/jpeg" , "image/png"];
+      const imgInput = document.getElementsByClassName("img-input")[0]
       
       if (!files || files.length === 0) {
         setUploadErr('Please select an image to upload');
       }else{
         if(types.indexOf(file.type) === -1){
           setUploadErr('image type must be (png/jpg)')
+          imgInput.value = "";
         }else{
           if(file.size > 2 * 1024 * 1024){
               setUploadErr("image size must be smaller than 2MB");
+              imgInput.value = "";
           }else{
             getImageBase64(file);
           }
