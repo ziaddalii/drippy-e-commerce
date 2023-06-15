@@ -25,7 +25,9 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.8.0",
     "react-scripts": "^5.0.1",
+    "react-stripe-checkout": "^2.6.3",
     "react-use": "^17.4.0",
+    "stripe": "^12.9.0",
     "swiper": "^8.4.5"
   },
   "devDependencies": {
