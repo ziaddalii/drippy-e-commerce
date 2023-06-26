@@ -15,6 +15,7 @@ import Accessories from './Accessories'
 import Shoes from './Shoes';
 import Jackets from './Jackets';
 import Sales from './Sales';
+import Checkout from './Checkout'
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
           <Route path="/shoes" element={<Shoes/>} />  
           <Route path="/jackets" element={<Jackets/>} />  
           <Route path="/sales" element={<Sales/>} />  
+          <Route path="/checkout" element={<Checkout/>} />  
             
         </Routes>
         <Footer/>

@@ -2,11 +2,12 @@ import React, {useEffect,useState} from 'react'
 import "../styles/cart.css";
 
 import { useProducts } from '../contexts/ProductsContext';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
  
 
 
 const Cart = React.forwardRef(({className }, ref) => {
+  const navigate = useNavigate()
 
   const {cart,decreaseQuantity, removeFromCart , increaseQuantity} = useProducts();
 
@@ -14,6 +15,10 @@ const Cart = React.forwardRef(({className }, ref) => {
 
 
   const [cartEmpty, setCartEmpty] = useState(true)
+
+  const handleCheckout = () => {
+    navigate("/checkout")
+  }
 
   useEffect(() => {
     calcTotalPrice()
@@ -73,7 +78,7 @@ const Cart = React.forwardRef(({className }, ref) => {
             )
           })}
           <p className='my-1'>total: egp {totalPrice}</p>
-          <button className='checkout-btn btn btn-success d-flex justify-content-center mx-auto'>checkout</button>
+          <button onClick={handleCheckout} className='checkout-btn btn btn-success d-flex justify-content-center mx-auto'>checkout</button>
         </>
       }
       </div>
