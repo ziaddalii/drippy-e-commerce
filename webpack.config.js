@@ -13,12 +13,6 @@ module.exports = {
         filename: 'bundle.js',
         publicPath: '/',
     },
-    // devServer: {
-        // historyApiFallback: true,
-        // historyApiFallback: {
-        //     rewrites: [{ from: /\/drippy-e-commerce\/[^?]/, to: '/404.html' }],
-        //   },
-        // },
     plugins: [
           new Dotenv({
             path: path.resolve(__dirname, './.env'),
