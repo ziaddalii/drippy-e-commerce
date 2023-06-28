@@ -34,7 +34,7 @@ function PaymentForm() {
     if(!error){
         try {
             const {id} = paymentMethod
-            const response = await axios.post(window.location.hostname, {
+            const response = await axios.post("https://drippy-api-server.onrender.com", {
                 amount: totalPrice,
                 id
             })
