@@ -17,7 +17,6 @@ function PaymentForm() {
                 fontWeight: 500,
                 fontFamily: "Roboto, Open Sans, Segoe UI, sans-serif",
                 fontSize: "16px",
-                padding:"1rem",
                 ":-webkit-autofill": { color: "black" },
                 "::placeholder": { color: "black" }
             },
@@ -34,7 +33,7 @@ function PaymentForm() {
     if(!error){
         try {
             const {id} = paymentMethod
-            const response = await axios.post("https://drippy-api-server.onrender.com/payment", {
+            const response = await axios.post(process.env.REACT_APP_SERVER_URL, {
                 amount: totalPrice,
                 id
             })
