@@ -1,6 +1,8 @@
 .checkout-section{
     background-color: var(--secondary-theme-color);
     min-height: 100vh;
+	position: relative;
+	overflow: hidden;
 }
 
 .cart-payment-item{
@@ -11,7 +13,6 @@
 }
 
 .FormGroup {
-	/* margin: 0 15px 20px; */
 	padding: 0;
 	border-style: none;
 	background-color: white;
@@ -55,6 +56,15 @@
     margin: 1rem 0rem;
 }
 
+.payment-btn:disabled{
+	background-color: rgb(67, 104, 71);
+	cursor: wait;
+}
+
 .payment-btn:active {
 	box-shadow: 0 6px 9px rgba(50, 50, 93, 0.06), 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.card-number-test{
+	font-size: 12px;
 }
