@@ -3,10 +3,16 @@ import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js'
 import axios from 'axios'
 import { useProducts } from '../contexts/ProductsContext'
 import "../styles/paymentForm.css"
+import ReactConfetti from 'react-confetti'
+import { useWindowSize } from 'react-use'
 function PaymentForm() {
     const [success, setSuccess] = useState(false)
     const stripe = useStripe()
     const elements = useElements()
+    const { width, height } = useWindowSize()
+    useEffect(() => {
+        console.log("WIDTH:",width ,"HIEGHT:",height );
+    }, [width,height])
 
     const CARD_OPTIONS = {
         iconStyle: "solid",
@@ -85,6 +91,10 @@ useEffect(() => {
             </form>
             :
             <div>
+                <ReactConfetti
+                width={width}
+                height={height}
+                />
                 <h2 className='mt-2'>Payment Succeeded</h2>
             </div>
         }
