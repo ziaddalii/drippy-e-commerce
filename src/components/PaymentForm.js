@@ -5,7 +5,9 @@ import { useProducts } from '../contexts/ProductsContext'
 import "../styles/paymentForm.css"
 import ReactConfetti from 'react-confetti'
 import { useWindowSize } from 'react-use'
+import { useNavigate } from 'react-router-dom'
 function PaymentForm() {
+    const navigate = useNavigate()
     const [success, setSuccess] = useState(false)
     const stripe = useStripe()
     const elements = useElements()
@@ -97,6 +99,11 @@ useEffect(() => {
                 height={height}
                 />
                 <h2 className='mt-2'>Payment Succeeded</h2>
+                <div className='mt-5'>
+                    <button onClick={() => navigate("/")} className='sell-btn'>
+                    Go back to Home
+                    </button>
+                </div>
             </div>
         }
     </div>
